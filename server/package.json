@@ -1,0 +1,42 @@
+{
+  "name": "maxcode",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "bin": {
+    "maxcode": "./server/maxcode.mjs"
+  },
+  "scripts": {
+    "dev": "node server/maxcode.mjs start && vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -b --pretty",
+    "start": "node server/maxcode.mjs start --open",
+    "daemon": "node server/maxcode.mjs start",
+    "daemon:foreground": "node server/daemon.mjs",
+    "daemon:stop": "node server/maxcode.mjs stop",
+    "daemon:status": "node server/maxcode.mjs status",
+    "daemon:logs": "node server/maxcode.mjs logs"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "highlight.js": "^11.11.1",
+    "lucide-react": "^0.544.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-markdown": "^10.1.0",
+    "rehype-highlight": "^7.0.2",
+    "remark-gfm": "^4.0.1",
+    "zustand": "^5.0.8"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^5.0.0",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.3"
+  }
+}
